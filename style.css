@@ -1,0 +1,123 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 700px;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: #eef1f7;
+  color: #1b2236;
+  font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+}
+
+.quiz {
+  width: 100%;
+  max-width: 600px;
+  background: #ffffff;
+  border: 1px solid #d5dae6;
+  border-radius: 14px;
+  padding: 28px;
+}
+
+.progress-text {
+  margin: 0 0 9px;
+  font-size: 14px;
+  color: #5d6680;
+}
+
+.progress-bar {
+  height: 6px;
+  background: #d5dae6;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #3a4bd1;
+  transition: width .3s ease;
+}
+
+.question {
+  margin: 0 0 20px;
+  font-size: 19px;
+  line-height: 1.35;
+}
+
+.options {
+  display: grid;
+  gap: .65rem;
+}
+
+.option {
+  text-align: left;
+  font: inherit;
+  padding: 13px 16px;
+  background: #ffffff;
+  color: #1b2236;
+  border: 2px solid #d5dae6;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color .15s, background .15s;
+}
+
+.option:hover:not(:disabled) { border-color: #3a4bd1; }
+.option:disabled { cursor: default; }
+
+.option.correct {
+  background: #dff5e8;
+  border-color: #1f9d55;
+  color: #11602f;
+  font-weight: bold;
+}
+
+.option.wrong {
+  background: #fbe1e1;
+  border-color: #d63b3b;
+  color: #8e1f1f;
+}
+
+.feedback {
+  min-height: 20px;
+  margin: 16px 0 0;
+  font-weight: bold;
+}
+.feedback.good { 
+  color: #1f9d55; 
+}
+.feedback.bad { 
+  color: #d63b3b; 
+}
+
+.btn {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 20px;
+  margin-top: 16px;
+  background: #3a4bd1;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn:disabled { 
+  background: #d5dae6; 
+  color: #5d6680; 
+  cursor: not-allowed; 
+}
+.btn:focus-visible, .option:focus-visible { 
+  outline: 3px solid #3a4bd1; 
+  outline-offset: 2px; 
+}
+
+.result { 
+  text-align: center; 
+  padding: 16px 0; 
+}
+.result h2 { 
+  margin: 0 0 12px; 
+  font-size: 25px; 
+  line-height: 1.35; 
+}
